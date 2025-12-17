@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'eisenhower_matrix_page.dart';
+import 'settings_page.dart';
 import 'task_list_page.dart';
 
 class TodoMainPage extends StatelessWidget {
@@ -13,7 +14,7 @@ class TodoMainPage extends StatelessWidget {
       length: 4, // Number of tabs
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Todo List'),
+          // title: const Text('Todo List'),
           bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.grid_view_rounded)),
@@ -25,10 +26,10 @@ class TodoMainPage extends StatelessWidget {
         ),
         body: const TabBarView( // Content corresponding to the tabs
           children: [
+            SettingsPage(),
             EisenhowerMatrixPage(),
             TaskListPage(),
             Center(child: Icon(Icons.checklist_rounded, size: 150)),
-            Center(child: Icon(Icons.bar_chart_rounded, size: 150)),
           ],
         ),
       ),

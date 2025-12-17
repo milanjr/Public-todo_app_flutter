@@ -27,8 +27,8 @@ class TaskListPage extends StatelessWidget {
                         if (task.isUrgent)
                           Icon(Icons.priority_high_rounded, color: Colors.redAccent,),
                         if (task.isImportant)
-                        Icon(Icons.info_outline_rounded, color: Colors.blue,),
-                        Icon(Icons.calendar_month_rounded, color: Colors.blue,),
+                          Icon(Icons.info_outline_rounded, color: Colors.blue,),
+                        Icon(Icons.calendar_month_rounded,),
 
                       ],
                     ),
