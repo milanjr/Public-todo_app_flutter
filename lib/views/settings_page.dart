@@ -45,32 +45,39 @@ class SettingsPage extends StatelessWidget {
                     ],
                   ),
 
-                  ColorPickerRow(
-                    title: 'Very Urgent',
-                    color: vm.urgentImpColor,
-                  ),
-                  ColorPickerRow(title: 'Urgent', color: vm.urgentNotImpColor),
-                  ColorPickerRow(
-                    title: 'Important',
-                    color: vm.notUrgentImpColor,
-                  ),
-                  ColorPickerRow(
-                    title: 'Low Priority',
-                    color: vm.notUrgentNotImpColor,
-                  ),
+                  Expanded(
+                    child: ListView(
+                      padding: const EdgeInsets.all(8),
+                      children: [
+                        ColorPickerRow(
+                          title: 'Very Urgent',
+                          color: vm.urgentImpColor,
+                        ),
+                        ColorPickerRow(title: 'Urgent', color: vm.urgentNotImpColor),
+                        ColorPickerRow(
+                          title: 'Important',
+                          color: vm.notUrgentImpColor,
+                        ),
+                        ColorPickerRow(
+                          title: 'Low Priority',
+                          color: vm.notUrgentNotImpColor,
+                        ),
 
-                  ColorPickerRow(
-                    title: 'Not Planned',
-                    color: vm.notPlannedColor,
+                        ColorPickerRow(
+                          title: 'Not Planned',
+                          color: vm.notPlannedColor,
+                        ),
+                        ColorPickerRow(title: 'Planned', color: vm.plannedColor),
+                        ColorPickerRow(
+                          title: 'In Progress',
+                          color: vm.inProgressColor,
+                        ),
+                        ColorPickerRow(title: 'On Hold', color: vm.onHoldColor),
+                        ColorPickerRow(title: 'Done', color: vm.doneColor),
+                        ColorPickerRow(title: 'Canceled', color: vm.canceledColor),
+                      ],
+                    ),
                   ),
-                  ColorPickerRow(title: 'Planned', color: vm.plannedColor),
-                  ColorPickerRow(
-                    title: 'In Progress',
-                    color: vm.inProgressColor,
-                  ),
-                  ColorPickerRow(title: 'On Hold', color: vm.onHoldColor),
-                  ColorPickerRow(title: 'Done', color: vm.doneColor),
-                  ColorPickerRow(title: 'Canceled', color: vm.canceledColor),
                 ],
               ),
             );

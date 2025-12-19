@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../view_models/dashboard_view_model.dart';
 
+import 'dashboard_page.dart';
 import 'eisenhower_matrix_page.dart';
 import 'settings_page.dart';
 import 'task_list_page.dart';
@@ -24,12 +27,15 @@ class TodoMainPage extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView( // Content corresponding to the tabs
+        body: TabBarView( // Content corresponding to the tabs
           children: [
-            SettingsPage(),
-            EisenhowerMatrixPage(),
-            TaskListPage(),
-            Center(child: Icon(Icons.checklist_rounded, size: 150)),
+            ChangeNotifierProvider(
+              create: (context) => DashboardViewModel(),
+              child: const DashboardPage(),
+            ),
+            const EisenhowerMatrixPage(),
+            const TaskListPage(),
+            const SettingsPage(),
           ],
         ),
       ),
