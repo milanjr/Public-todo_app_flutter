@@ -36,10 +36,10 @@ class MatrixCardView extends StatelessWidget {
       child: Column(
         children: [
           TitleRowView(title: title, color: color, alpha: 250,),
-          TaskRowView(title: "One", color: Colors.white, alpha: 50,),
-          TaskRowView(title: "Two", color: Colors.white, alpha: 50,),
-          TaskRowView(title: "Three", color: Colors.white, alpha: 50,),
-          TaskRowView(title: "Four", color: Colors.white, alpha: 50,),
+          TodoTaskRowView(title: "One", color: Colors.white, alpha: 50,),
+          TodoTaskRowView(title: "Two", color: Colors.white, alpha: 50,),
+          TodoTaskRowView(title: "Three", color: Colors.white, alpha: 50,),
+          TodoTaskRowView(title: "Four", color: Colors.white, alpha: 50,),
         ],
       ),
     );
@@ -79,8 +79,8 @@ class TitleRowView extends StatelessWidget {
   }
 }
 
-class TaskRowView extends StatelessWidget {
-  const TaskRowView({
+class TodoTaskRowView extends StatelessWidget {
+  const TodoTaskRowView({
     super.key,
     required this.title, required this.color, required this.alpha,
   });

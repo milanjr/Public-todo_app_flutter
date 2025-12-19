@@ -1,10 +1,10 @@
 // lib/models/task.dart
-class Task {
+class TodoTask {
   final String title;
   final bool isUrgent;
   final bool isImportant;
 
-  Task({
+  TodoTask({
     required this.title,
     this.isUrgent = false,
     this.isImportant = false,
@@ -19,5 +19,5 @@ class Task {
   }
 
   @override
-  String toString() => 'Task(title: $title, urgent: $isUrgent, important: $isImportant)';
+  String toString() => 'TodoTask(title: $title, urgent: $isUrgent, important: $isImportant)';
 }

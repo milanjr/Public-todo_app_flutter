@@ -3,37 +3,37 @@ import 'package:flutter/material.dart';
 import '../models/task.dart';
 
 class EisenhowerMatrixViewModel extends ChangeNotifier {
-  List<Task> _tasks = [
-    // Task(title: "Buy groceries", isUrgent: true, isImportant: true),
-    Task(title: "Pay electricity bill", isUrgent: true, isImportant: true),
-    Task(title: "Read productivity book", isUrgent: true, isImportant: true),
-    Task(title: "Plan vacation itinerary", isUrgent: true, isImportant: true),
-    Task(title: "Book doctor's appointment", isUrgent: true, isImportant: true),
+  List<TodoTask> _tasks = [
+    // TodoTask(title: "Buy groceries", isUrgent: true, isImportant: true),
+    TodoTask(title: "Pay electricity bill", isUrgent: true, isImportant: true),
+    TodoTask(title: "Read productivity book", isUrgent: true, isImportant: true),
+    TodoTask(title: "Plan vacation itinerary", isUrgent: true, isImportant: true),
+    TodoTask(title: "Book doctor's appointment", isUrgent: true, isImportant: true),
 
-    Task(title: "Buy groceries", isUrgent: true, isImportant: false),
-    // Task(title: "Pay electricity bill", isUrgent: true, isImportant: false),
-    Task(title: "Read productivity book", isUrgent: true, isImportant: false),
-    Task(title: "Plan vacation itinerary", isUrgent: true, isImportant: false),
-    Task(title: "Book doctor's appointment", isUrgent: true, isImportant: false),
+    TodoTask(title: "Buy groceries", isUrgent: true, isImportant: false),
+    // TodoTask(title: "Pay electricity bill", isUrgent: true, isImportant: false),
+    TodoTask(title: "Read productivity book", isUrgent: true, isImportant: false),
+    TodoTask(title: "Plan vacation itinerary", isUrgent: true, isImportant: false),
+    TodoTask(title: "Book doctor's appointment", isUrgent: true, isImportant: false),
 
-    Task(title: "Buy groceries", isUrgent: false, isImportant: true),
-    Task(title: "Pay electricity bill", isUrgent: false, isImportant: true),
-    // Task(title: "Read productivity book", isUrgent: false, isImportant: true),
-    Task(title: "Plan vacation itinerary", isUrgent: false, isImportant: true),
-    Task(title: "Book doctor's appointment", isUrgent: false, isImportant: true),
+    TodoTask(title: "Buy groceries", isUrgent: false, isImportant: true),
+    TodoTask(title: "Pay electricity bill", isUrgent: false, isImportant: true),
+    // TodoTask(title: "Read productivity book", isUrgent: false, isImportant: true),
+    TodoTask(title: "Plan vacation itinerary", isUrgent: false, isImportant: true),
+    TodoTask(title: "Book doctor's appointment", isUrgent: false, isImportant: true),
 
-    Task(title: "Buy groceries", isUrgent: false, isImportant: false),
-    Task(title: "Pay electricity bill", isUrgent: false, isImportant: false),
-    Task(title: "Read productivity book", isUrgent: false, isImportant: false),
-    // Task(title: "Plan vacation itinerary", isUrgent: false, isImportant: false),
-    Task(title: "Book doctor's appointment", isUrgent: false, isImportant: false),
+    TodoTask(title: "Buy groceries", isUrgent: false, isImportant: false),
+    TodoTask(title: "Pay electricity bill", isUrgent: false, isImportant: false),
+    TodoTask(title: "Read productivity book", isUrgent: false, isImportant: false),
+    // TodoTask(title: "Plan vacation itinerary", isUrgent: false, isImportant: false),
+    TodoTask(title: "Book doctor's appointment", isUrgent: false, isImportant: false),
   ];
 
-  List<Task> get tasks => _tasks;
+  List<TodoTask> get tasks => _tasks;
 
   // Group tasks by quadrant
-  List<List<Task>> get quadrants {
-    final q = List.generate(4, (i) => <Task>[]);
+  List<List<TodoTask>> get quadrants {
+    final q = List.generate(4, (i) => <TodoTask>[]);
     for (var task in _tasks) {
       q[task.quadrantIndex].add(task);
     }
@@ -42,12 +42,12 @@ class EisenhowerMatrixViewModel extends ChangeNotifier {
 
   // Add new task
   void addTask(String title, {bool isUrgent = false, bool isImportant = false}) {
-    _tasks.add(Task(title: title, isUrgent: isUrgent, isImportant: isImportant));
+    _tasks.add(TodoTask(title: title, isUrgent: isUrgent, isImportant: isImportant));
     notifyListeners();
   }
 
   // Remove task
-  void removeTask(Task task) {
+  void removeTask(TodoTask task) {
     _tasks.remove(task);
     notifyListeners();
   }
