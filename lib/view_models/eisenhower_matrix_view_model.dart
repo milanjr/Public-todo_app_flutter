@@ -27,6 +27,29 @@ class EisenhowerMatrixViewModel extends ChangeNotifier {
     TodoTask(title: "Read productivity book", isUrgent: false, isImportant: false),
     // TodoTask(title: "Plan vacation itinerary", isUrgent: false, isImportant: false),
     TodoTask(title: "Book doctor's appointment", isUrgent: false, isImportant: false),
+    // TodoTask(title: "Buy groceries", isUrgent: true, isImportant: true),
+    TodoTask(title: "Pay electricity bill", isUrgent: true, isImportant: true),
+    TodoTask(title: "Read productivity book", isUrgent: true, isImportant: true),
+    TodoTask(title: "Plan vacation itinerary", isUrgent: true, isImportant: true),
+    TodoTask(title: "Book doctor's appointment", isUrgent: true, isImportant: true),
+
+    TodoTask(title: "Buy groceries", isUrgent: true, isImportant: false),
+    // TodoTask(title: "Pay electricity bill", isUrgent: true, isImportant: false),
+    TodoTask(title: "Read productivity book", isUrgent: true, isImportant: false),
+    TodoTask(title: "Plan vacation itinerary", isUrgent: true, isImportant: false),
+    TodoTask(title: "Book doctor's appointment", isUrgent: true, isImportant: false),
+
+    TodoTask(title: "Buy groceries", isUrgent: false, isImportant: true),
+    TodoTask(title: "Pay electricity bill", isUrgent: false, isImportant: true),
+    // TodoTask(title: "Read productivity book", isUrgent: false, isImportant: true),
+    TodoTask(title: "Plan vacation itinerary", isUrgent: false, isImportant: true),
+    TodoTask(title: "Book doctor's appointment", isUrgent: false, isImportant: true),
+
+    TodoTask(title: "Buy groceries", isUrgent: false, isImportant: false),
+    TodoTask(title: "Pay electricity bill", isUrgent: false, isImportant: false),
+    TodoTask(title: "Read productivity book", isUrgent: false, isImportant: false),
+    // TodoTask(title: "Plan vacation itinerary", isUrgent: false, isImportant: false),
+    TodoTask(title: "Book doctor's appointment", isUrgent: false, isImportant: false),
   ];
 
   List<TodoTask> get tasks => _tasks;

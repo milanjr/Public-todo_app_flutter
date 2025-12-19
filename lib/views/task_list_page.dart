@@ -15,7 +15,8 @@ class TaskListPage extends StatelessWidget {
         child: Consumer<EisenhowerMatrixViewModel>(
           builder: (context, vm, child) {
             return Center(
-              child: Column(
+              child: Expanded(
+                child: ListView(
                 children: List.generate(vm.tasks.length, (index) {
                   final task = vm.tasks[index];
                   return Padding(
@@ -34,6 +35,7 @@ class TaskListPage extends StatelessWidget {
                     ),
                   );
                 }),
+              )
               )
                 );
           }
