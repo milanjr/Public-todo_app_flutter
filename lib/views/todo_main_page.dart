@@ -29,12 +29,12 @@ class TodoMainPage extends StatelessWidget {
         ),
         body: TabBarView( // Content corresponding to the tabs
           children: [
+            const EisenhowerMatrixPage(),
+            const TaskListPage(),
             ChangeNotifierProvider(
               create: (context) => DashboardViewModel(),
               child: const DashboardPage(),
             ),
-            const EisenhowerMatrixPage(),
-            const TaskListPage(),
             const SettingsPage(),
           ],
         ),
